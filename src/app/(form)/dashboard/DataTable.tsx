@@ -15,6 +15,10 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 
+type TData = any;
+
+type TValue = any;
+
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
@@ -31,13 +35,13 @@ export default function DataTable({
   });
 
   return (
-    <div className="rounded-md border">
+    <div className="border rounded-md">
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map((header) => (
-                <TableHead key={header.id}>
+                <TableHead className="font-bold" key={header.id}>
                   {header.isPlaceholder
                     ? null
                     : flexRender(

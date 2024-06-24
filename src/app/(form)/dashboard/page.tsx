@@ -1,7 +1,7 @@
-import DataTable from "@/app/dashboard/DataTable";
-import { columns } from "@/app/dashboard/columns";
+import DataTable from "@/app/(form)/dashboard/DataTable";
+import { columns } from "@/app/(form)/dashboard/columns";
 
-export default function Home() {
+export default function Dashboard() {
   return (
     <div className="container">
       <h1>Recent forms</h1>
