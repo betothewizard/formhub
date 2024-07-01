@@ -13,12 +13,12 @@ interface BuilderPageProps {
     const {id}=params;
     
     // Đây là phần getUserByID(code trong actions)
-    // const form= await GetFormById(Number(id));
-    // if(!form) {
-    //     throw new Error("form not found");
-    // }
+    const form= await getFormById(Number(id));
+    if(!form) {
+        throw new Error("form not found");
+    }
 
-    // return <FormBuilder form={form}/>
+    return <FormBuilder form={form}/>
   }
 
 export default BuilderPage;

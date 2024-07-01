@@ -4,7 +4,9 @@ import { DndContext } from "@dnd-kit/core";
 import { PreviewDialogBtn } from "./PreviewDialogBtn";
 import { PublishFormBtd } from "./PublishFormBtd";
 import { SaveFormBtn } from "./SaveFormBtn";
-import { Designer } from "./Designer";
+
+import { DragOverlayWrapper } from "./DragOverlayWrapper";
+import Designer from "./Designer";
 
 interface FormBuilderProps{
     form:Form;
@@ -59,6 +61,7 @@ export const FormBuilder=(props:FormBuilderProps) =>
                 <Designer/>
             </div>
        </main>
+       <DragOverlayWrapper/>
        </DndContext>
     )
 }
